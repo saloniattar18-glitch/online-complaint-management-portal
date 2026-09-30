@@ -193,7 +193,14 @@
         redirectToDashboard(user.role || requestedRole);
       }, 500);
     } catch (error) {
-      toast(error.message || "Login failed.", "error");
+       console.error("LOGIN ERROR:", error);
+
+  toast(
+    error instanceof Error
+      ? error.message
+      : "Login failed.",
+    "error"
+  );
     } finally {
       setButtonLoading(submitButton, false);
     }

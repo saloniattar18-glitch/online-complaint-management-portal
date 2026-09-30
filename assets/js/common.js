@@ -224,84 +224,144 @@
        API REQUEST HANDLER
        ===================================================== */
 
-  async function api(url, options = {}) {
-    const { method = "GET", data = null, headers = {}, auth = true } = options;
+async function api(url, options = {}) {
+  const {
+    method = "GET",
+    data = null,
+    headers = {},
+    auth = true,
+  } = options;
 
-    const requestHeaders = {
-      Accept: "application/json",
-      ...headers,
-    };
+  const requestHeaders = {
+    Accept: "application/json",
+    ...headers,
+  };
 
-    const token = getToken();
+  const token = getToken();
 
-    if (auth && token) {
-      requestHeaders.Authorization = `Bearer ${token}`;
-    }
-
-    const requestOptions = {
-      method,
-      headers: requestHeaders,
-    };
-
-    if (data !== null && method !== "GET") {
-      if (data instanceof FormData) {
-        requestOptions.body = data;
-      } else {
-        requestHeaders["Content-Type"] = "application/json";
-        requestOptions.body = JSON.stringify(data);
-      }
-    }
-
-    let response;
-
-    try {
-      response = await fetch(url, requestOptions);
-    } catch (error) {
-      throw new Error(
-        "Unable to connect to the server. Please check your internet connection.",
-      );
-    }
-
-    let result = {};
-
-    const contentType = response.headers.get("content-type") || "";
-
-    if (contentType.includes("application/json")) {
-      try {
-        result = await response.json();
-      } catch (error) {
-        result = {};
-      }
-    } else {
-      const text = await response.text();
-
-      result = {
-        message: text,
-      };
-    }
-
-    if (response.status === 401 && auth) {
-      clearSession();
-
-      const role = getPageRole();
-
-      if (role) {
-        setTimeout(() => {
-          window.location.href = getLoginPath(role);
-        }, 300);
-      }
-    }
-
-    if (!response.ok) {
-      throw new Error(
-        result.message ||
-          result.error ||
-          `Request failed with status ${response.status}`,
-      );
-    }
-
-    return result;
+  if (auth && token) {
+    requestHeaders.Authorization = `Bearer ${token}`;
   }
+
+  const requestOptions = {
+    method,
+    headers: requestHeaders,
+  };
+
+  if (data !== null && method !== "GET") {
+    if (data instanceof FormData) {
+      requestOptions.body = data;
+    } else {
+      requestHeaders["Content-Type"] = "application/json";
+      requestOptions.body = JSON.stringify(data);
+    }
+  }
+
+  let response;
+
+  try {
+    response = await fetch(url, requestOptions);
+  } catch (error) {
+    throw new Error(
+      "Unable to connect to the server. Please check your internet connection.",
+    );
+  }
+
+  let result = {};
+
+  const contentType = response.headers.get("content-type") || "";
+
+  if (contentType.includes("application/json")) {
+    try {
+      result = await response.json();
+    } catch (error) {
+      result = {};
+    }
+  } else {
+    const text = await response.text();
+
+    result = {
+      message: text,
+    };
+  }
+
+  /*
+   * Handle expired/invalid authentication.
+   */
+  if (response.status === 401 && auth) {
+    clearSession();
+
+    const role = getPageRole();
+
+    if (role) {
+      setTimeout(() => {
+        window.location.href = getLoginPath(role);
+      }, 300);
+    }
+  }
+
+  /*
+   * Handle API errors.
+   */
+  if (!response.ok || result?.success === false) {
+    let message = null;
+
+    /*
+     * Normal API response:
+     *
+     * {
+     *   success: false,
+     *   message: "Invalid email or password."
+     * }
+     */
+    if (typeof result?.message === "string") {
+      message = result.message;
+    }
+
+    /*
+     * Nested error message:
+     *
+     * {
+     *   error: {
+     *     message: "Something went wrong"
+     *   }
+     * }
+     */
+    if (!message && typeof result?.error?.message === "string") {
+      message = result.error.message;
+    }
+
+    /*
+     * Sometimes error itself is a string.
+     */
+    if (!message && typeof result?.error === "string") {
+      message = result.error;
+    }
+
+    /*
+     * Handle other common API formats.
+     */
+    if (!message && typeof result?.data?.message === "string") {
+      message = result.data.message;
+    }
+
+    /*
+     * Last-resort conversion.
+     */
+    if (!message) {
+      if (typeof result === "string") {
+        message = result;
+      } else {
+        message = `Request failed with status ${response.status}.`;
+      }
+    }
+
+    throw new Error(message);
+  }
+
+  return result;
+}
+
 
   /* =====================================================
        AUTHORIZATION GUARD
