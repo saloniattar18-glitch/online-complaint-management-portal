@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Assigned Complaints | Complaint Portal</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="../assets/css/style.css" />
+
+    <link rel="stylesheet" href="../assets/css/staff.css" />
+  </head>
+
+  <body class="staff-panel">
+    <section id="container">
+      <!-- HEADER -->
+      <header class="header black-bg">
+        <div class="sidebar-toggle-box">
+          <i class="fa fa-bars"></i>
+        </div>
+
+        <a href="dashboard.html" class="logo">
+          <b>
+            Complaint
+            <span>Portal</span>
+          </b>
+        </a>
+
+        <ul class="top-menu">
+          <li>
+            <a href="#" class="logout" data-logout> Logout </a>
+          </li>
+        </ul>
+      </header>
+
+      <!-- SIDEBAR -->
+      <aside>
+        <div id="sidebar">
+          <div class="sidebar-profile">
+            <div class="profile-avatar" data-user-initial>S</div>
+
+            <h5 data-user-name>Staff Member</h5>
+
+            <p data-user-role>Staff</p>
+          </div>
+
+          <ul class="sidebar-menu">
+            <li>
+              <a href="dashboard.html">
+                <i class="fa fa-dashboard"></i>
+                Dashboard
+              </a>
+            </li>
+
+            <li>
+              <a href="assigned-complaints.html">
+                <i class="fa fa-tasks"></i>
+                Assigned Complaints
+              </a>
+            </li>
+
+            <li>
+              <a href="profile.html">
+                <i class="fa fa-user"></i>
+                My Profile
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <section id="main-content">
+        <section class="wrapper">
+          <div class="page-header">
+            <h2>Assigned Complaints</h2>
+
+            <p>View and manage complaints assigned to your account.</p>
+          </div>
+
+          <!-- FILTERS -->
+          <div class="filter-bar">
+            <div class="filter-row">
+              <!-- SEARCH -->
+              <div class="filter-item">
+                <label for="complaintSearch"> Search </label>
+
+                <div class="search-box">
+                  <i class="fa fa-search"></i>
+
+                  <input
+                    type="text"
+                    id="complaintSearch"
+                    class="form-control"
+                    placeholder="Search complaints..."
+                  />
+                </div>
+              </div>
+
+              <!-- STATUS -->
+              <div class="filter-item">
+                <label for="statusFilter"> Status </label>
+
+                <select id="statusFilter" class="form-control">
+                  <option value="">All Status</option>
+
+                  <option value="assigned">Assigned</option>
+
+                  <option value="in_progress">In Progress</option>
+
+                  <option value="resolved">Resolved</option>
+
+                  <option value="closed">Closed</option>
+                </select>
+              </div>
+
+              <!-- PRIORITY -->
+              <div class="filter-item">
+                <label for="priorityFilter"> Priority </label>
+
+                <select id="priorityFilter" class="form-control">
+                  <option value="">All Priorities</option>
+
+                  <option value="low">Low</option>
+
+                  <option value="medium">Medium</option>
+
+                  <option value="high">High</option>
+
+                  <option value="urgent">Urgent</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- COMPLAINT LIST -->
+          <div id="assignedComplaints" class="assigned-list">
+            <div class="loader"></div>
+          </div>
+        </section>
+      </section>
+    </section>
+
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/staff.js"></script>
+  </body>
+</html>

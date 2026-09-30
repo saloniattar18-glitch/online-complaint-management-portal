@@ -1,0 +1,427 @@
+/* =========================================================
+   ONLINE COMPLAINT MANAGEMENT PORTAL
+   User Portal Styles
+   File: assets/css/user.css
+   Load AFTER assets/css/style.css
+   ========================================================= */
+
+body.user-panel,
+body.user-page {
+  --user-primary: var(--theme);
+  --user-primary-dark: var(--theme-dark);
+  --user-success: var(--success);
+  --user-warning: var(--warning);
+  --user-danger: var(--danger);
+}
+
+body.user-panel .header,
+body.user-page .header {
+  background: var(--header);
+  border-bottom: 1px solid var(--header-border);
+}
+
+body.user-panel #sidebar,
+body.user-page #sidebar {
+  background: var(--sidebar);
+}
+
+body.user-panel ul.sidebar-menu li a.active,
+body.user-panel ul.sidebar-menu li a:hover,
+body.user-page ul.sidebar-menu li a.active,
+body.user-page ul.sidebar-menu li a:hover {
+  background: var(--user-primary);
+  color: #fff;
+}
+
+/* =========================================================
+   USER DASHBOARD
+   ========================================================= */
+
+.user-welcome {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--theme), var(--theme-dark));
+  color: #fff;
+  padding: 24px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: var(--soft-shadow);
+}
+
+.user-welcome::after {
+  content: "";
+  position: absolute;
+  width: 170px;
+  height: 170px;
+  right: -55px;
+  top: -55px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.13);
+}
+
+.user-welcome h2,
+.user-welcome h3,
+.user-welcome p {
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+.user-welcome h2,
+.user-welcome h3 {
+  margin-bottom: 7px;
+}
+
+.user-welcome p {
+  margin: 0;
+  opacity: 0.92;
+}
+
+.user-quick-actions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.user-action-card {
+  display: block;
+  background: #fff;
+  padding: 22px 18px;
+  border-radius: 4px;
+  box-shadow: var(--soft-shadow);
+  text-align: center;
+  transition: 0.25s ease;
+}
+
+.user-action-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 18px rgba(0, 0, 0, 0.12);
+}
+
+.user-action-card i {
+  width: 58px;
+  height: 58px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  border-radius: 50%;
+  background: var(--theme);
+  color: #fff;
+  font-size: 22px;
+}
+
+.user-action-card h4 {
+  margin: 0 0 5px;
+  color: #555;
+}
+
+.user-action-card p {
+  margin: 0;
+  color: #999;
+  font-size: 11px;
+}
+
+.user-action-card.success i {
+  background: var(--success);
+}
+
+.user-action-card.warning i {
+  background: var(--warning);
+}
+
+.user-action-card.purple i {
+  background: var(--purple);
+}
+
+/* =========================================================
+   COMPLAINT FORM
+   ========================================================= */
+
+.complaint-form-card {
+  max-width: 900px;
+}
+
+.complaint-form-section {
+  margin-bottom: 22px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.complaint-form-section:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.complaint-form-section h4 {
+  margin-bottom: 14px;
+  color: #555;
+}
+
+.file-upload-box {
+  position: relative;
+  padding: 28px 20px;
+  text-align: center;
+  border: 2px dashed #d8d8d8;
+  border-radius: 5px;
+  background: #fafafa;
+  transition: 0.2s ease;
+}
+
+.file-upload-box:hover,
+.file-upload-box.dragover {
+  border-color: var(--theme-dark);
+  background: #f4fdff;
+}
+
+.file-upload-box i {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--theme-dark);
+  font-size: 32px;
+}
+
+.file-upload-box input[type="file"] {
+  max-width: 100%;
+  margin-top: 10px;
+}
+
+.image-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.image-preview-item {
+  position: relative;
+  min-height: 110px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #f7f7f7;
+}
+
+.image-preview-item img {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+}
+
+/* =========================================================
+   USER COMPLAINT LIST
+   ========================================================= */
+
+.user-complaints-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.user-complaint-list .complaint-card {
+  border-left-color: var(--theme);
+}
+
+.user-complaint-list .complaint-card.status-pending-card {
+  border-left-color: var(--warning);
+}
+
+.user-complaint-list .complaint-card.status-progress-card {
+  border-left-color: var(--info);
+}
+
+.user-complaint-list .complaint-card.status-resolved-card {
+  border-left-color: var(--success);
+}
+
+.complaint-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 13px;
+}
+
+/* =========================================================
+   STATUS TRACKING
+   ========================================================= */
+
+.tracking-summary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.tracking-summary .tracking-box {
+  background: #fff;
+  padding: 15px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.tracking-summary .tracking-box i {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--theme-dark);
+  font-size: 24px;
+}
+
+.tracking-summary .tracking-box strong {
+  display: block;
+  color: #555;
+}
+
+.tracking-summary .tracking-box span {
+  color: #999;
+  font-size: 11px;
+}
+
+.status-track-card {
+  background: #fff;
+  padding: 20px;
+  box-shadow: var(--soft-shadow);
+  border-radius: 4px;
+}
+
+/* =========================================================
+   FEEDBACK
+   ========================================================= */
+
+.feedback-rating {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.feedback-rating input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.feedback-rating label {
+  margin: 0;
+  font-size: 28px;
+  color: #d7d7d7;
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.feedback-rating label:hover,
+.feedback-rating label.active {
+  color: #f6bb42;
+  transform: scale(1.08);
+}
+
+.feedback-note {
+  padding: 12px 14px;
+  border-left: 4px solid var(--theme);
+  background: #f6fdff;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+/* =========================================================
+   USER PROFILE
+   ========================================================= */
+
+.user-profile-layout {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 20px;
+}
+
+.profile-meta-list {
+  margin-top: 18px;
+  text-align: left;
+}
+
+.profile-meta-list li {
+  padding: 9px 0;
+  border-bottom: 1px solid #eee;
+  color: #777;
+}
+
+.profile-meta-list li:last-child {
+  border-bottom: 0;
+}
+
+.profile-meta-list i {
+  width: 22px;
+  color: var(--theme-dark);
+}
+
+/* =========================================================
+   EMPTY / LOADING
+   ========================================================= */
+
+.user-loading {
+  padding: 35px 15px;
+  text-align: center;
+}
+
+.user-error-box {
+  padding: 14px;
+  background: #fdebec;
+  border: 1px solid #f6c1c7;
+  color: #9e303c;
+  border-radius: 4px;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 992px) {
+  .user-quick-actions {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tracking-summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .user-profile-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .user-welcome {
+    padding: 20px;
+  }
+
+  .user-complaints-toolbar {
+    display: block;
+  }
+
+  .user-complaints-toolbar .btn {
+    margin-top: 10px;
+  }
+
+  .image-preview-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  .user-quick-actions,
+  .tracking-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .image-preview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .complaint-card-actions .btn {
+    width: 100%;
+  }
+}

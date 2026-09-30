@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Admin Dashboard | Complaint Portal</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="../assets/css/style.css" />
+
+    <link rel="stylesheet" href="../assets/css/admin.css" />
+  </head>
+
+  <body class="admin-panel">
+    <section id="container">
+      <!-- HEADER -->
+      <header class="header black-bg">
+        <div class="sidebar-toggle-box">
+          <i class="fa fa-bars"></i>
+        </div>
+
+        <a href="dashboard.html" class="logo">
+          <b>
+            Complaint
+            <span>Portal</span>
+          </b>
+        </a>
+
+        <ul class="top-menu">
+          <li>
+            <a href="#" class="logout" data-logout> Logout </a>
+          </li>
+        </ul>
+      </header>
+
+      <!-- SIDEBAR -->
+      <aside>
+        <div id="sidebar">
+          <div class="sidebar-profile">
+            <div class="profile-avatar" data-user-initial>A</div>
+
+            <h5 data-user-name>Administrator</h5>
+
+            <p data-user-role>Admin</p>
+          </div>
+
+          <ul class="sidebar-menu">
+            <li>
+              <a href="dashboard.html">
+                <i class="fa fa-dashboard"></i>
+                Dashboard
+              </a>
+            </li>
+
+            <li>
+              <a href="complaints.html">
+                <i class="fa fa-file-text"></i>
+                Complaints
+              </a>
+            </li>
+
+            <li>
+              <a href="users.html">
+                <i class="fa fa-users"></i>
+                Users
+              </a>
+            </li>
+
+            <li>
+              <a href="categories.html">
+                <i class="fa fa-tags"></i>
+                Categories
+              </a>
+            </li>
+
+            <li>
+              <a href="departments.html">
+                <i class="fa fa-building"></i>
+                Departments
+              </a>
+            </li>
+
+            <li>
+              <a href="staff.html">
+                <i class="fa fa-user-secret"></i>
+                Staff
+              </a>
+            </li>
+
+            <li>
+              <a href="reports.html">
+                <i class="fa fa-bar-chart"></i>
+                Reports
+              </a>
+            </li>
+
+            <li>
+              <a href="messages.html">
+                <i class="fa fa-envelope"></i>
+                Messages
+              </a>
+            </li>
+
+            <li>
+              <a href="profile.html">
+                <i class="fa fa-user"></i>
+                Profile
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <section id="main-content">
+        <section class="wrapper" data-admin-dashboard>
+          <div class="page-header">
+            <h2>Admin Dashboard</h2>
+
+            <p>Overview of complaint portal activities.</p>
+          </div>
+
+          <!-- WELCOME -->
+          <div class="admin-welcome">
+            <div>
+              <h3>
+                Welcome,
+                <span data-user-name> Administrator </span>
+              </h3>
+
+              <p>Monitor complaints, users, staff and departments.</p>
+            </div>
+
+            <a href="complaints.html" class="btn btn-theme02">
+              <i class="fa fa-file-text"></i>
+              View Complaints
+            </a>
+          </div>
+
+          <!-- STATISTICS -->
+          <div class="admin-dashboard-grid">
+            <div class="admin-stat-card">
+              <div class="admin-stat-top">
+                <div class="admin-stat-icon">
+                  <i class="fa fa-users"></i>
+                </div>
+              </div>
+
+              <div class="admin-stat-number" data-stat-users>0</div>
+
+              <div class="admin-stat-label">Total Users</div>
+            </div>
+
+            <div class="admin-stat-card info">
+              <div class="admin-stat-top">
+                <div class="admin-stat-icon">
+                  <i class="fa fa-file-text"></i>
+                </div>
+              </div>
+
+              <div class="admin-stat-number" data-stat-complaints>0</div>
+
+              <div class="admin-stat-label">Total Complaints</div>
+            </div>
+
+            <div class="admin-stat-card warning">
+              <div class="admin-stat-top">
+                <div class="admin-stat-icon">
+                  <i class="fa fa-clock-o"></i>
+                </div>
+              </div>
+
+              <div class="admin-stat-number" data-stat-pending>0</div>
+
+              <div class="admin-stat-label">Pending Complaints</div>
+            </div>
+
+            <div class="admin-stat-card success">
+              <div class="admin-stat-top">
+                <div class="admin-stat-icon">
+                  <i class="fa fa-check-circle"></i>
+                </div>
+              </div>
+
+              <div class="admin-stat-number" data-stat-resolved>0</div>
+
+              <div class="admin-stat-label">Resolved Complaints</div>
+            </div>
+          </div>
+
+          <div class="admin-dashboard-grid">
+            <div class="admin-stat-card">
+              <div class="admin-stat-top">
+                <div class="admin-stat-icon">
+                  <i class="fa fa-user-secret"></i>
+                </div>
+              </div>
+
+              <div class="admin-stat-number" data-stat-staff>0</div>
+
+              <div class="admin-stat-label">Staff Members</div>
+            </div>
+
+            <div class="admin-stat-card">
+              <div class="admin-stat-top">
+                <div class="admin-stat-icon">
+                  <i class="fa fa-building"></i>
+                </div>
+              </div>
+
+              <div class="admin-stat-number" data-stat-departments>0</div>
+
+              <div class="admin-stat-label">Departments</div>
+            </div>
+          </div>
+
+          <!-- RECENT COMPLAINTS -->
+          <div class="admin-panel-card">
+            <div class="admin-panel-title">
+              <h3>Recent Complaints</h3>
+
+              <a href="complaints.html" class="btn btn-theme btn-sm">
+                View All
+              </a>
+            </div>
+
+            <div class="table-responsive">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Complaint ID</th>
+                    <th>Title</th>
+                    <th>User</th>
+                    <th>Category</th>
+                    <th>Status</th>
+                    <th>Date</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+
+                <tbody id="recentComplaintsTable">
+                  <tr>
+                    <td colspan="7" class="text-center">Loading...</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      </section>
+    </section>
+
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/admin.js"></script>
+  </body>
+</html>

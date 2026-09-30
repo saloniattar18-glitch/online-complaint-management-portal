@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Feedback | Complaint Portal</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="../assets/css/style.css" />
+
+    <link rel="stylesheet" href="../assets/css/user.css" />
+  </head>
+
+  <body class="user-panel">
+    <section id="container">
+      <header class="header black-bg">
+        <div class="sidebar-toggle-box">
+          <i class="fa fa-bars"></i>
+        </div>
+
+        <a href="dashboard.html" class="logo">
+          <b>
+            Complaint
+            <span>Portal</span>
+          </b>
+        </a>
+
+        <ul class="top-menu">
+          <li>
+            <a href="#" class="logout" data-logout> Logout </a>
+          </li>
+        </ul>
+      </header>
+
+      <aside>
+        <div id="sidebar">
+          <div class="sidebar-profile">
+            <div class="profile-avatar" data-user-initial>U</div>
+
+            <h5 data-user-name>User</h5>
+
+            <p data-user-role>User</p>
+          </div>
+
+          <ul class="sidebar-menu">
+            <li>
+              <a href="dashboard.html">
+                <i class="fa fa-dashboard"></i>
+                Dashboard
+              </a>
+            </li>
+
+            <li>
+              <a href="submit-complaint.html">
+                <i class="fa fa-plus-circle"></i>
+                Submit Complaint
+              </a>
+            </li>
+
+            <li>
+              <a href="complaints.html">
+                <i class="fa fa-file-text"></i>
+                My Complaints
+              </a>
+            </li>
+
+            <li>
+              <a href="profile.html">
+                <i class="fa fa-user"></i>
+                My Profile
+              </a>
+            </li>
+
+            <li>
+              <a href="feedback.html">
+                <i class="fa fa-star"></i>
+                Feedback
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <section id="main-content">
+        <section class="wrapper">
+          <div class="page-header">
+            <h2>Feedback</h2>
+
+            <p>Share your experience with the complaint resolution process.</p>
+          </div>
+
+          <div class="row">
+            <div class="col-8">
+              <div class="form-panel">
+                <div class="panel-header">
+                  <h3>Submit Feedback</h3>
+                </div>
+
+                <div class="feedback-note">
+                  Your feedback helps us improve complaint handling and service
+                  quality.
+                </div>
+
+                <form id="feedbackForm">
+                  <div class="form-group">
+                    <label for="complaint_id"> Complaint ID </label>
+
+                    <input
+                      type="number"
+                      id="complaint_id"
+                      name="complaint_id"
+                      class="form-control"
+                      min="1"
+                      placeholder="Enter complaint ID"
+                    />
+
+                    <small class="help-text">
+                      If you opened this page from a complaint, the complaint ID
+                      will be taken automatically.
+                    </small>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="rating">
+                      Rating
+                      <span class="required">*</span>
+                    </label>
+
+                    <select
+                      id="rating"
+                      name="rating"
+                      class="form-control"
+                      required
+                    >
+                      <option value="">Select Rating</option>
+
+                      <option value="5">5 - Excellent</option>
+
+                      <option value="4">4 - Very Good</option>
+
+                      <option value="3">3 - Good</option>
+
+                      <option value="2">2 - Fair</option>
+
+                      <option value="1">1 - Poor</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="feedback_type"> Feedback Type </label>
+
+                    <select
+                      id="feedback_type"
+                      name="feedback_type"
+                      class="form-control"
+                    >
+                      <option value="complaint_resolution">
+                        Complaint Resolution
+                      </option>
+
+                      <option value="staff_service">Staff Service</option>
+
+                      <option value="portal_experience">
+                        Portal Experience
+                      </option>
+
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="comments">
+                      Comments
+                      <span class="required">*</span>
+                    </label>
+
+                    <textarea
+                      id="comments"
+                      name="comments"
+                      class="form-control"
+                      rows="6"
+                      maxlength="1500"
+                      placeholder="Write your feedback..."
+                      required
+                    ></textarea>
+                  </div>
+
+                  <div class="form-group">
+                    <label> Would you recommend this service? </label>
+
+                    <div>
+                      <label style="margin-right: 20px">
+                        <input
+                          type="radio"
+                          name="recommend"
+                          value="yes"
+                          checked
+                        />
+
+                        Yes
+                      </label>
+
+                      <label>
+                        <input type="radio" name="recommend" value="no" />
+
+                        No
+                      </label>
+                    </div>
+                  </div>
+
+                  <button type="submit" class="btn btn-theme">
+                    <i class="fa fa-paper-plane"></i>
+                    Submit Feedback
+                  </button>
+                </form>
+              </div>
+            </div>
+
+            <div class="col-4">
+              <div class="portal-card">
+                <div class="panel-header">
+                  <h4>Feedback Guidelines</h4>
+                </div>
+
+                <p>Please provide genuine feedback based on your experience.</p>
+
+                <p>
+                  Avoid sharing passwords or other confidential information.
+                </p>
+
+                <p>
+                  For unresolved complaints, use the complaint status page to
+                  check progress.
+                </p>
+
+                <a href="complaints.html" class="btn btn-light btn-block">
+                  <i class="fa fa-file-text"></i>
+                  My Complaints
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </section>
+
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/user.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const params = new URLSearchParams(window.location.search);
+
+        const id = params.get("id");
+
+        const complaintIdField = document.getElementById("complaint_id");
+
+        if (complaintIdField && id) {
+          complaintIdField.value = id;
+        }
+      });
+    </script>
+  </body>
+</html>

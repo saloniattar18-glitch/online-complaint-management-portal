@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Users | Complaint Portal</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="../assets/css/style.css" />
+
+    <link rel="stylesheet" href="../assets/css/admin.css" />
+  </head>
+
+  <body class="admin-panel">
+    <section id="container">
+      <header class="header black-bg">
+        <div class="sidebar-toggle-box">
+          <i class="fa fa-bars"></i>
+        </div>
+
+        <a href="dashboard.html" class="logo">
+          <b>
+            Complaint
+            <span>Portal</span>
+          </b>
+        </a>
+
+        <ul class="top-menu">
+          <li>
+            <a href="#" class="logout" data-logout> Logout </a>
+          </li>
+        </ul>
+      </header>
+
+      <aside>
+        <div id="sidebar">
+          <div class="sidebar-profile">
+            <div class="profile-avatar" data-user-initial>A</div>
+
+            <h5 data-user-name>Administrator</h5>
+
+            <p data-user-role>Admin</p>
+          </div>
+
+          <ul class="sidebar-menu">
+            <li>
+              <a href="dashboard.html">
+                <i class="fa fa-dashboard"></i>
+                Dashboard
+              </a>
+            </li>
+
+            <li>
+              <a href="complaints.html">
+                <i class="fa fa-file-text"></i>
+                Complaints
+              </a>
+            </li>
+
+            <li>
+              <a href="users.html">
+                <i class="fa fa-users"></i>
+                Users
+              </a>
+            </li>
+
+            <li>
+              <a href="categories.html">
+                <i class="fa fa-tags"></i>
+                Categories
+              </a>
+            </li>
+
+            <li>
+              <a href="departments.html">
+                <i class="fa fa-building"></i>
+                Departments
+              </a>
+            </li>
+
+            <li>
+              <a href="staff.html">
+                <i class="fa fa-user-secret"></i>
+                Staff
+              </a>
+            </li>
+
+            <li>
+              <a href="reports.html">
+                <i class="fa fa-bar-chart"></i>
+                Reports
+              </a>
+            </li>
+
+            <li>
+              <a href="messages.html">
+                <i class="fa fa-envelope"></i>
+                Messages
+              </a>
+            </li>
+
+            <li>
+              <a href="profile.html">
+                <i class="fa fa-user"></i>
+                Profile
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <section id="main-content">
+        <section class="wrapper">
+          <div class="page-header">
+            <h2>Registered Users</h2>
+
+            <p>View all registered complaint portal users.</p>
+          </div>
+
+          <div class="admin-table-card">
+            <div class="table-responsive">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>User</th>
+                    <th>Mobile</th>
+                    <th>Role</th>
+                    <th>Status</th>
+                    <th>Registered</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+
+                <tbody id="usersTableBody">
+                  <tr>
+                    <td colspan="7" class="text-center">Loading users...</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      </section>
+    </section>
+
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/admin.js"></script>
+  </body>
+</html>

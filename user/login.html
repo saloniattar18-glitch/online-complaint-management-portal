@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>User Login | Complaint Portal</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="../assets/css/style.css" />
+
+    <link rel="stylesheet" href="../assets/css/user.css" />
+  </head>
+
+  <body class="auth-page">
+    <div class="form-login">
+      <h2 class="form-login-heading">User Login</h2>
+
+      <div class="login-wrap">
+        <div class="login-title">
+          <h3>Complaint Portal</h3>
+
+          <p>Login to submit and track complaints.</p>
+        </div>
+
+        <form id="loginForm" data-role="user" autocomplete="off">
+          <div class="form-group">
+            <label for="email"> Email Address </label>
+
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form-control"
+              placeholder="Enter your email"
+              autocomplete="email"
+              data-trim="true"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="password"> Password </label>
+
+            <div class="password-wrapper">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                class="form-control"
+                placeholder="Enter password"
+                autocomplete="current-password"
+                required
+              />
+
+              <button
+                type="button"
+                class="password-toggle"
+                aria-label="Show password"
+              >
+                <i class="fa fa-eye"></i>
+              </button>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-theme btn-block">
+            <i class="fa fa-sign-in"></i>
+            Login
+          </button>
+        </form>
+
+        <div class="registration">
+          Don't have an account?
+
+          <a href="register.html"> Register Here </a>
+        </div>
+
+        <div class="registration">
+          <a href="../index.html">
+            <i class="fa fa-arrow-left"></i>
+            Back to Website
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/auth.js"></script>
+  </body>
+</html>

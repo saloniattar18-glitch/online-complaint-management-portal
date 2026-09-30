@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Contact | Complaint Portal</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+
+  <body>
+    <header class="public-header">
+      <div class="public-container">
+        <a href="index.html" class="public-brand">
+          <img
+            src="assets/images/logo.png"
+            alt="Complaint Portal Logo"
+            class="public-logo"
+          />
+
+          <span> Complaint Portal </span>
+        </a>
+
+        <button
+          type="button"
+          class="public-nav-toggle"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa fa-bars"></i>
+        </button>
+
+        <nav class="public-nav">
+          <a href="index.html"> Home </a>
+
+          <a href="about.html"> About </a>
+
+          <a href="how-it-works.html"> How It Works </a>
+
+          <a href="contact.html"> Contact </a>
+
+          <a href="user/login.html" class="btn btn-theme"> User Login </a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="page-banner">
+      <div class="public-container">
+        <h1>Contact Us</h1>
+
+        <p>Send a general enquiry or message to the portal administrator.</p>
+      </div>
+    </section>
+
+    <section class="public-section">
+      <div class="public-container">
+        <div class="row">
+          <div class="col-5">
+            <div class="public-content-card">
+              <h2>Get in Touch</h2>
+
+              <p>Use this contact form for general portal-related questions.</p>
+
+              <div class="contact-info-item">
+                <i class="fa fa-envelope"></i>
+
+                <div>
+                  <strong> Email </strong>
+
+                  <p>admin@complaintportal.com</p>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <i class="fa fa-clock-o"></i>
+
+                <div>
+                  <strong> Portal Availability </strong>
+
+                  <p>
+                    Online complaint submission is available through the web
+                    portal.
+                  </p>
+                </div>
+              </div>
+
+              <div class="alert alert-info">
+                To submit an actual complaint, please register or login to your
+                user account instead of using this contact form.
+              </div>
+
+              <a href="user/login.html" class="btn btn-theme"> User Login </a>
+            </div>
+          </div>
+
+          <div class="col-7">
+            <div class="form-panel">
+              <div class="panel-header">
+                <h3>Send Message</h3>
+              </div>
+
+              <form id="contactForm">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="name">
+                      Full Name
+                      <span class="required">*</span>
+                    </label>
+
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      class="form-control"
+                      minlength="2"
+                      placeholder="Enter your name"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="email">
+                      Email Address
+                      <span class="required">*</span>
+                    </label>
+
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      class="form-control"
+                      placeholder="Enter your email"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="subject">
+                    Subject
+                    <span class="required">*</span>
+                  </label>
+
+                  <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    class="form-control"
+                    minlength="3"
+                    maxlength="250"
+                    placeholder="Enter subject"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="message">
+                    Message
+                    <span class="required">*</span>
+                  </label>
+
+                  <textarea
+                    id="message"
+                    name="message"
+                    class="form-control"
+                    rows="7"
+                    minlength="10"
+                    maxlength="3000"
+                    placeholder="Write your message..."
+                    required
+                  ></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-theme">
+                  <i class="fa fa-paper-plane"></i>
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="public-footer">
+      <div class="public-container">
+        <div class="footer-bottom">
+          <p>
+            &copy;
+            <span id="currentYear"></span>
+            Online Complaint Management Portal.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/public.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const year = document.getElementById("currentYear");
+
+        if (year) {
+          year.textContent = new Date().getFullYear();
+        }
+      });
+    </script>
+  </body>
+</html>

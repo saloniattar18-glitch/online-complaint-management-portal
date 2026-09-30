@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>How It Works | Complaint Portal</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+
+  <body>
+    <header class="public-header">
+      <div class="public-container">
+        <a href="index.html" class="public-brand">
+          <img
+            src="assets/images/logo.png"
+            alt="Complaint Portal Logo"
+            class="public-logo"
+          />
+
+          <span> Complaint Portal </span>
+        </a>
+
+        <button
+          type="button"
+          class="public-nav-toggle"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa fa-bars"></i>
+        </button>
+
+        <nav class="public-nav">
+          <a href="index.html"> Home </a>
+
+          <a href="about.html"> About </a>
+
+          <a href="how-it-works.html"> How It Works </a>
+
+          <a href="contact.html"> Contact </a>
+
+          <a href="user/login.html" class="btn btn-theme"> User Login </a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="page-banner">
+      <div class="public-container">
+        <h1>How It Works</h1>
+
+        <p>Understand the complete complaint management workflow.</p>
+      </div>
+    </section>
+
+    <section class="public-section">
+      <div class="public-container">
+        <div class="steps-grid">
+          <div class="step-card">
+            <span class="step-number"> 1 </span>
+
+            <h3>Register</h3>
+
+            <p>
+              Create a user account using your name, email, mobile number and
+              password.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <span class="step-number"> 2 </span>
+
+            <h3>Login</h3>
+
+            <p>
+              Login using your registered email and password to access your
+              personal dashboard.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <span class="step-number"> 3 </span>
+
+            <h3>Submit Complaint</h3>
+
+            <p>
+              Provide a complaint title, category, priority, description,
+              location and optional image.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <span class="step-number"> 4 </span>
+
+            <h3>Admin Review</h3>
+
+            <p>
+              The administrator reviews the complaint and assigns it to an
+              appropriate department and staff member.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <span class="step-number"> 5 </span>
+
+            <h3>Staff Action</h3>
+
+            <p>
+              Assigned staff members review complaints and update their progress
+              with remarks.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <span class="step-number"> 6 </span>
+
+            <h3>Resolution</h3>
+
+            <p>
+              Once the issue is handled, the complaint can be marked as resolved
+              or closed.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <span class="step-number"> 7 </span>
+
+            <h3>Track History</h3>
+
+            <p>
+              Users can check the complaint's status timeline and review each
+              update.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <span class="step-number"> 8 </span>
+
+            <h3>Feedback</h3>
+
+            <p>
+              Users can provide ratings and comments based on their experience.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="public-section public-section-light">
+      <div class="public-container">
+        <div class="public-content-card">
+          <h2>Complaint Status Flow</h2>
+
+          <div class="status-flow">
+            <span class="status-badge status-pending"> Pending </span>
+
+            <i class="fa fa-arrow-right"></i>
+
+            <span class="status-badge status-assigned"> Assigned </span>
+
+            <i class="fa fa-arrow-right"></i>
+
+            <span class="status-badge status-in-progress"> In Progress </span>
+
+            <i class="fa fa-arrow-right"></i>
+
+            <span class="status-badge status-resolved"> Resolved </span>
+
+            <i class="fa fa-arrow-right"></i>
+
+            <span class="status-badge status-closed"> Closed </span>
+          </div>
+
+          <p class="mt-20">
+            Depending on the situation, an administrator may also reject an
+            invalid or inappropriate complaint.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="public-cta">
+      <div class="public-container">
+        <h2>Ready to Submit a Complaint?</h2>
+
+        <a href="user/register.html" class="btn btn-theme btn-lg">
+          Create User Account
+        </a>
+      </div>
+    </section>
+
+    <footer class="public-footer">
+      <div class="public-container">
+        <div class="footer-bottom">
+          <p>
+            &copy;
+            <span id="currentYear"></span>
+            Online Complaint Management Portal.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/public.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const year = document.getElementById("currentYear");
+
+        if (year) {
+          year.textContent = new Date().getFullYear();
+        }
+      });
+    </script>
+  </body>
+</html>

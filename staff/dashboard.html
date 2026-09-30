@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Staff Dashboard | Complaint Portal</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="../assets/css/style.css" />
+
+    <link rel="stylesheet" href="../assets/css/staff.css" />
+  </head>
+
+  <body class="staff-panel">
+    <section id="container">
+      <!-- HEADER -->
+      <header class="header black-bg">
+        <div class="sidebar-toggle-box">
+          <i class="fa fa-bars"></i>
+        </div>
+
+        <a href="dashboard.html" class="logo">
+          <b>
+            Complaint
+            <span>Portal</span>
+          </b>
+        </a>
+
+        <ul class="top-menu">
+          <li>
+            <a href="#" class="logout" data-logout> Logout </a>
+          </li>
+        </ul>
+      </header>
+
+      <!-- SIDEBAR -->
+      <aside>
+        <div id="sidebar">
+          <div class="sidebar-profile">
+            <div class="profile-avatar" data-user-initial>S</div>
+
+            <h5 data-user-name>Staff Member</h5>
+
+            <p data-user-role>Staff</p>
+          </div>
+
+          <ul class="sidebar-menu">
+            <li>
+              <a href="dashboard.html">
+                <i class="fa fa-dashboard"></i>
+                Dashboard
+              </a>
+            </li>
+
+            <li>
+              <a href="assigned-complaints.html">
+                <i class="fa fa-tasks"></i>
+                Assigned Complaints
+              </a>
+            </li>
+
+            <li>
+              <a href="profile.html">
+                <i class="fa fa-user"></i>
+                My Profile
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <section id="main-content">
+        <section class="wrapper" data-staff-dashboard>
+          <div class="page-header">
+            <h2>Staff Dashboard</h2>
+
+            <p>Manage complaints assigned to you.</p>
+          </div>
+
+          <!-- WELCOME -->
+          <div class="staff-welcome">
+            <h2>
+              Welcome,
+              <span data-user-name> Staff Member </span>
+            </h2>
+
+            <p>Review your assigned complaints and update their progress.</p>
+          </div>
+
+          <!-- STATS -->
+          <div class="staff-stats-grid">
+            <div class="staff-stat-card">
+              <div class="staff-stat-icon">
+                <i class="fa fa-tasks"></i>
+              </div>
+
+              <div>
+                <div class="staff-stat-number" data-stat-assigned>0</div>
+
+                <div class="staff-stat-label">Assigned Complaints</div>
+              </div>
+            </div>
+
+            <div class="staff-stat-card">
+              <div class="staff-stat-icon">
+                <i class="fa fa-spinner"></i>
+              </div>
+
+              <div>
+                <div class="staff-stat-number" data-stat-progress>0</div>
+
+                <div class="staff-stat-label">In Progress</div>
+              </div>
+            </div>
+
+            <div class="staff-stat-card success">
+              <div class="staff-stat-icon">
+                <i class="fa fa-check-circle"></i>
+              </div>
+
+              <div>
+                <div class="staff-stat-number" data-stat-resolved>0</div>
+
+                <div class="staff-stat-label">Resolved</div>
+              </div>
+            </div>
+
+            <div class="staff-stat-card danger">
+              <div class="staff-stat-icon">
+                <i class="fa fa-exclamation-triangle"></i>
+              </div>
+
+              <div>
+                <div class="staff-stat-number" data-stat-overdue>0</div>
+
+                <div class="staff-stat-label">Overdue</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- QUICK ACTION -->
+          <div class="portal-card">
+            <div class="panel-header panel-header-with-action">
+              <h3>Assigned Complaints</h3>
+
+              <a href="assigned-complaints.html" class="btn btn-info btn-sm">
+                View All
+              </a>
+            </div>
+
+            <div id="recentAssignedComplaints">
+              <div class="loader"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </section>
+
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/staff.js"></script>
+  </body>
+</html>

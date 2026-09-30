@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Submit Complaint | Complaint Portal</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="../assets/css/style.css" />
+
+    <link rel="stylesheet" href="../assets/css/user.css" />
+  </head>
+
+  <body class="user-panel">
+    <section id="container">
+      <header class="header black-bg">
+        <div class="sidebar-toggle-box">
+          <i class="fa fa-bars"></i>
+        </div>
+
+        <a href="dashboard.html" class="logo">
+          <b>
+            Complaint
+            <span>Portal</span>
+          </b>
+        </a>
+
+        <ul class="top-menu">
+          <li>
+            <a href="#" class="logout" data-logout> Logout </a>
+          </li>
+        </ul>
+      </header>
+
+      <aside>
+        <div id="sidebar">
+          <div class="sidebar-profile">
+            <div class="profile-avatar" data-user-initial>U</div>
+
+            <h5 data-user-name>User</h5>
+
+            <p data-user-role>User</p>
+          </div>
+
+          <ul class="sidebar-menu">
+            <li>
+              <a href="dashboard.html">
+                <i class="fa fa-dashboard"></i>
+                Dashboard
+              </a>
+            </li>
+
+            <li>
+              <a href="submit-complaint.html">
+                <i class="fa fa-plus-circle"></i>
+                Submit Complaint
+              </a>
+            </li>
+
+            <li>
+              <a href="complaints.html">
+                <i class="fa fa-file-text"></i>
+                My Complaints
+              </a>
+            </li>
+
+            <li>
+              <a href="profile.html">
+                <i class="fa fa-user"></i>
+                My Profile
+              </a>
+            </li>
+
+            <li>
+              <a href="feedback.html">
+                <i class="fa fa-star"></i>
+                Feedback
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <section id="main-content">
+        <section class="wrapper">
+          <div class="page-title-row">
+            <div>
+              <h2>Submit Complaint</h2>
+
+              <p>Provide complete information about your complaint.</p>
+            </div>
+
+            <a href="complaints.html" class="btn btn-light">
+              <i class="fa fa-list"></i>
+              My Complaints
+            </a>
+          </div>
+
+          <div class="form-panel complaint-form-card">
+            <form id="complaintForm" enctype="multipart/form-data">
+              <!-- BASIC INFORMATION -->
+              <div class="complaint-form-section">
+                <h4>
+                  <i class="fa fa-info-circle"></i>
+                  Complaint Information
+                </h4>
+
+                <div class="form-group">
+                  <label for="title">
+                    Complaint Title
+                    <span class="required">*</span>
+                  </label>
+
+                  <input
+                    type="text"
+                    id="title"
+                    name="title"
+                    class="form-control"
+                    maxlength="150"
+                    placeholder="Enter a short complaint title"
+                    required
+                  />
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="category_id">
+                      Category
+                      <span class="required">*</span>
+                    </label>
+
+                    <select
+                      id="category_id"
+                      name="category_id"
+                      class="form-control"
+                      required
+                    >
+                      <option value="">Loading categories...</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="department_id"> Department </label>
+
+                    <select
+                      id="department_id"
+                      name="department_id"
+                      class="form-control"
+                    >
+                      <option value="">Loading departments...</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="priority"> Priority </label>
+
+                  <select id="priority" name="priority" class="form-control">
+                    <option value="low">Low</option>
+
+                    <option value="medium" selected>Medium</option>
+
+                    <option value="high">High</option>
+
+                    <option value="urgent">Urgent</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="description">
+                    Complaint Description
+                    <span class="required">*</span>
+                  </label>
+
+                  <textarea
+                    id="description"
+                    name="description"
+                    class="form-control"
+                    rows="7"
+                    maxlength="3000"
+                    placeholder="Describe the problem clearly..."
+                    required
+                  ></textarea>
+                </div>
+              </div>
+
+              <!-- LOCATION -->
+              <div class="complaint-form-section">
+                <h4>
+                  <i class="fa fa-map-marker"></i>
+                  Complaint Location
+                </h4>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="location"> Location / Area </label>
+
+                    <input
+                      type="text"
+                      id="location"
+                      name="location"
+                      class="form-control"
+                      placeholder="Enter location or area"
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="pincode"> Pincode </label>
+
+                    <input
+                      type="text"
+                      id="pincode"
+                      name="pincode"
+                      class="form-control"
+                      maxlength="6"
+                      placeholder="Enter pincode"
+                    />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="address"> Detailed Address </label>
+
+                  <textarea
+                    id="address"
+                    name="address"
+                    class="form-control"
+                    rows="3"
+                    placeholder="Enter exact complaint location..."
+                  ></textarea>
+                </div>
+              </div>
+
+              <!-- IMAGE -->
+              <div class="complaint-form-section">
+                <h4>
+                  <i class="fa fa-image"></i>
+                  Attachment
+                </h4>
+
+                <div class="file-upload-box">
+                  <i class="fa fa-cloud-upload"></i>
+
+                  <strong> Upload Complaint Image </strong>
+
+                  <p class="text-muted">JPG, JPEG, PNG or WEBP image.</p>
+
+                  <input
+                    type="file"
+                    name="image"
+                    accept="image/jpeg,image/png,image/webp"
+                  />
+                </div>
+
+                <img
+                  id="complaintImagePreview"
+                  src=""
+                  alt="Complaint Preview"
+                  class="complaint-image mt-15"
+                  style="display: none"
+                />
+              </div>
+
+              <button type="submit" class="btn btn-theme btn-lg">
+                <i class="fa fa-paper-plane"></i>
+                Submit Complaint
+              </button>
+
+              <a href="dashboard.html" class="btn btn-light btn-lg"> Cancel </a>
+            </form>
+          </div>
+        </section>
+      </section>
+    </section>
+
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/user.js"></script>
+  </body>
+</html>

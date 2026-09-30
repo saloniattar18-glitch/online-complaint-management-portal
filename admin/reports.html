@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Reports | Complaint Portal</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="../assets/css/style.css" />
+
+    <link rel="stylesheet" href="../assets/css/admin.css" />
+  </head>
+
+  <body class="admin-panel">
+    <section id="container">
+      <header class="header black-bg">
+        <div class="sidebar-toggle-box">
+          <i class="fa fa-bars"></i>
+        </div>
+
+        <a href="dashboard.html" class="logo">
+          <b>
+            Complaint
+            <span>Portal</span>
+          </b>
+        </a>
+
+        <ul class="top-menu">
+          <li>
+            <a href="#" class="logout" data-logout> Logout </a>
+          </li>
+        </ul>
+      </header>
+
+      <aside>
+        <div id="sidebar">
+          <div class="sidebar-profile">
+            <div class="profile-avatar" data-user-initial>A</div>
+
+            <h5 data-user-name>Administrator</h5>
+
+            <p data-user-role>Admin</p>
+          </div>
+
+          <ul class="sidebar-menu">
+            <li>
+              <a href="dashboard.html">
+                <i class="fa fa-dashboard"></i>
+                Dashboard
+              </a>
+            </li>
+
+            <li>
+              <a href="complaints.html">
+                <i class="fa fa-file-text"></i>
+                Complaints
+              </a>
+            </li>
+
+            <li>
+              <a href="users.html">
+                <i class="fa fa-users"></i>
+                Users
+              </a>
+            </li>
+
+            <li>
+              <a href="categories.html">
+                <i class="fa fa-tags"></i>
+                Categories
+              </a>
+            </li>
+
+            <li>
+              <a href="departments.html">
+                <i class="fa fa-building"></i>
+                Departments
+              </a>
+            </li>
+
+            <li>
+              <a href="staff.html">
+                <i class="fa fa-user-secret"></i>
+                Staff
+              </a>
+            </li>
+
+            <li>
+              <a href="reports.html">
+                <i class="fa fa-bar-chart"></i>
+                Reports
+              </a>
+            </li>
+
+            <li>
+              <a href="messages.html">
+                <i class="fa fa-envelope"></i>
+                Messages
+              </a>
+            </li>
+
+            <li>
+              <a href="profile.html">
+                <i class="fa fa-user"></i>
+                Profile
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <section id="main-content">
+        <section class="wrapper" id="reportsContainer">
+          <div class="page-header">
+            <h2>Complaint Reports</h2>
+
+            <p>Analyze portal complaint statistics.</p>
+          </div>
+
+          <!-- FILTERS -->
+          <div class="report-filter-card">
+            <div class="filter-row">
+              <div class="filter-item">
+                <label for="reportFrom"> From Date </label>
+
+                <input type="date" id="reportFrom" class="form-control" />
+              </div>
+
+              <div class="filter-item">
+                <label for="reportTo"> To Date </label>
+
+                <input type="date" id="reportTo" class="form-control" />
+              </div>
+
+              <div class="filter-item">
+                <label for="reportDepartment"> Department ID </label>
+
+                <input
+                  type="number"
+                  id="reportDepartment"
+                  class="form-control"
+                  placeholder="All departments"
+                  min="1"
+                />
+              </div>
+
+              <div class="filter-actions">
+                <button type="button" id="generateReport" class="btn btn-theme">
+                  <i class="fa fa-search"></i>
+                  Generate
+                </button>
+
+                <button
+                  type="button"
+                  class="btn btn-secondary no-print"
+                  onclick="window.print()"
+                >
+                  <i class="fa fa-print"></i>
+                  Print
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- SUMMARY -->
+          <div class="report-summary-grid">
+            <div class="report-summary-box">
+              <strong data-report-total> 0 </strong>
+
+              <span> Total Complaints </span>
+            </div>
+
+            <div class="report-summary-box">
+              <strong data-report-resolved> 0 </strong>
+
+              <span> Resolved </span>
+            </div>
+
+            <div class="report-summary-box">
+              <strong data-report-pending> 0 </strong>
+
+              <span> Pending </span>
+            </div>
+
+            <div class="report-summary-box">
+              <strong data-report-resolution-rate> 0% </strong>
+
+              <span> Resolution Rate </span>
+            </div>
+          </div>
+
+          <div class="admin-panel-card">
+            <div class="panel-header">
+              <h4>Report Information</h4>
+            </div>
+
+            <p>
+              Use the filters above to generate complaint statistics for a
+              specific period or department.
+            </p>
+          </div>
+        </section>
+      </section>
+    </section>
+
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/admin.js"></script>
+  </body>
+</html>

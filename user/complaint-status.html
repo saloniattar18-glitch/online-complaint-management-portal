@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Complaint Status | Complaint Portal</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="../assets/css/style.css" />
+
+    <link rel="stylesheet" href="../assets/css/user.css" />
+  </head>
+
+  <body class="user-panel">
+    <section id="container">
+      <header class="header black-bg">
+        <div class="sidebar-toggle-box">
+          <i class="fa fa-bars"></i>
+        </div>
+
+        <a href="dashboard.html" class="logo">
+          <b>
+            Complaint
+            <span>Portal</span>
+          </b>
+        </a>
+
+        <ul class="top-menu">
+          <li>
+            <a href="#" class="logout" data-logout> Logout </a>
+          </li>
+        </ul>
+      </header>
+
+      <aside>
+        <div id="sidebar">
+          <div class="sidebar-profile">
+            <div class="profile-avatar" data-user-initial>U</div>
+
+            <h5 data-user-name>User</h5>
+
+            <p data-user-role>User</p>
+          </div>
+
+          <ul class="sidebar-menu">
+            <li>
+              <a href="dashboard.html">
+                <i class="fa fa-dashboard"></i>
+                Dashboard
+              </a>
+            </li>
+
+            <li>
+              <a href="submit-complaint.html">
+                <i class="fa fa-plus-circle"></i>
+                Submit Complaint
+              </a>
+            </li>
+
+            <li>
+              <a href="complaints.html">
+                <i class="fa fa-file-text"></i>
+                My Complaints
+              </a>
+            </li>
+
+            <li>
+              <a href="profile.html">
+                <i class="fa fa-user"></i>
+                My Profile
+              </a>
+            </li>
+
+            <li>
+              <a href="feedback.html">
+                <i class="fa fa-star"></i>
+                Feedback
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <section id="main-content">
+        <section class="wrapper">
+          <div class="page-title-row">
+            <div>
+              <h2>Complaint Status</h2>
+
+              <p>Track the latest progress of your complaint.</p>
+            </div>
+
+            <a href="complaints.html" class="btn btn-light">
+              <i class="fa fa-arrow-left"></i>
+              Back
+            </a>
+          </div>
+
+          <div class="status-track-card">
+            <div class="panel-header">
+              <h3>Status Timeline</h3>
+
+              <p class="text-muted">Updates are shown from oldest to newest.</p>
+            </div>
+
+            <div id="complaintStatusTimeline">
+              <div class="loader"></div>
+            </div>
+          </div>
+
+          <div class="portal-card">
+            <div class="panel-header">
+              <h4>Need More Information?</h4>
+            </div>
+
+            <p>
+              You can return to the complaint details page to review complete
+              information.
+            </p>
+
+            <a
+              href="complaint-details.html"
+              id="detailsLink"
+              class="btn btn-theme"
+            >
+              <i class="fa fa-eye"></i>
+              Complaint Details
+            </a>
+          </div>
+        </section>
+      </section>
+    </section>
+
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/user.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const params = new URLSearchParams(window.location.search);
+
+        const id = params.get("id");
+
+        const detailsLink = document.getElementById("detailsLink");
+
+        if (detailsLink && id) {
+          detailsLink.href =
+            "complaint-details.html?id=" + encodeURIComponent(id);
+        }
+      });
+    </script>
+  </body>
+</html>

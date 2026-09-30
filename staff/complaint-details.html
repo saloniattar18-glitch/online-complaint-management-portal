@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Complaint Details | Complaint Portal</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="../assets/css/style.css" />
+
+    <link rel="stylesheet" href="../assets/css/staff.css" />
+  </head>
+
+  <body class="staff-panel">
+    <section id="container">
+      <!-- HEADER -->
+      <header class="header black-bg">
+        <div class="sidebar-toggle-box">
+          <i class="fa fa-bars"></i>
+        </div>
+
+        <a href="dashboard.html" class="logo">
+          <b>
+            Complaint
+            <span>Portal</span>
+          </b>
+        </a>
+
+        <ul class="top-menu">
+          <li>
+            <a href="#" class="logout" data-logout> Logout </a>
+          </li>
+        </ul>
+      </header>
+
+      <!-- SIDEBAR -->
+      <aside>
+        <div id="sidebar">
+          <div class="sidebar-profile">
+            <div class="profile-avatar" data-user-initial>S</div>
+
+            <h5 data-user-name>Staff Member</h5>
+
+            <p data-user-role>Staff</p>
+          </div>
+
+          <ul class="sidebar-menu">
+            <li>
+              <a href="dashboard.html">
+                <i class="fa fa-dashboard"></i>
+                Dashboard
+              </a>
+            </li>
+
+            <li>
+              <a href="assigned-complaints.html">
+                <i class="fa fa-tasks"></i>
+                Assigned Complaints
+              </a>
+            </li>
+
+            <li>
+              <a href="profile.html">
+                <i class="fa fa-user"></i>
+                My Profile
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <section id="main-content">
+        <section class="wrapper">
+          <div class="page-title-row">
+            <div>
+              <h2>Complaint Details</h2>
+
+              <p>Review the complaint and update its progress.</p>
+            </div>
+
+            <a href="assigned-complaints.html" class="btn btn-light">
+              <i class="fa fa-arrow-left"></i>
+              Back
+            </a>
+          </div>
+
+          <div class="staff-complaint-layout">
+            <!-- LEFT SIDE -->
+            <div>
+              <div id="staffComplaintDetails">
+                <div class="loader"></div>
+              </div>
+
+              <!-- STATUS HISTORY -->
+              <div class="portal-card">
+                <div class="panel-header">
+                  <h4>Status History</h4>
+                </div>
+
+                <div id="staffStatusHistory">
+                  <div class="loader"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- RIGHT SIDE -->
+            <div>
+              <!-- UPDATE STATUS -->
+              <div class="staff-side-card">
+                <div class="panel-header">
+                  <h4>Update Complaint Status</h4>
+                </div>
+
+                <div class="status-update-box">
+                  <form id="statusUpdateForm">
+                    <div class="form-group">
+                      <label for="status">
+                        Status
+                        <span class="required">*</span>
+                      </label>
+
+                      <select
+                        id="status"
+                        name="status"
+                        class="form-control"
+                        required
+                      >
+                        <option value="assigned">Assigned</option>
+
+                        <option value="in_progress">In Progress</option>
+
+                        <option value="resolved">Resolved</option>
+
+                        <option value="closed">Closed</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="remarks"> Remarks </label>
+
+                      <textarea
+                        id="remarks"
+                        name="remarks"
+                        class="form-control"
+                        rows="5"
+                        maxlength="1000"
+                        placeholder="Enter progress details or resolution remarks..."
+                      ></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-info btn-block">
+                      <i class="fa fa-refresh"></i>
+                      Update Status
+                    </button>
+                  </form>
+                </div>
+              </div>
+
+              <!-- STAFF NOTES -->
+              <div class="staff-side-card">
+                <div class="panel-header">
+                  <h4>Staff Guidelines</h4>
+                </div>
+
+                <p>
+                  Review the complaint carefully before changing the status.
+                </p>
+
+                <p>
+                  Add clear remarks whenever the complaint moves to a new stage.
+                </p>
+
+                <p>
+                  Mark a complaint as resolved only after the issue has been
+                  addressed.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </section>
+
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/staff.js"></script>
+  </body>
+</html>

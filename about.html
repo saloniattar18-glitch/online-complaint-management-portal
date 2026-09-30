@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="About the Online Complaint Management Portal."
+    />
+
+    <title>About | Complaint Portal</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+
+  <body>
+    <header class="public-header">
+      <div class="public-container">
+        <a href="index.html" class="public-brand">
+          <img
+            src="assets/images/logo.png"
+            alt="Complaint Portal Logo"
+            class="public-logo"
+          />
+
+          <span> Complaint Portal </span>
+        </a>
+
+        <button
+          type="button"
+          class="public-nav-toggle"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa fa-bars"></i>
+        </button>
+
+        <nav class="public-nav">
+          <a href="index.html"> Home </a>
+
+          <a href="about.html"> About </a>
+
+          <a href="how-it-works.html"> How It Works </a>
+
+          <a href="contact.html"> Contact </a>
+
+          <a href="user/login.html" class="btn btn-theme"> User Login </a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="page-banner">
+      <div class="public-container">
+        <h1>About the Portal</h1>
+
+        <p>
+          Improving complaint handling through a centralized digital platform.
+        </p>
+      </div>
+    </section>
+
+    <section class="public-section">
+      <div class="public-container">
+        <div class="public-content-card">
+          <h2>Online Complaint Management Portal</h2>
+
+          <p>
+            The Online Complaint Management Portal is a web-based system
+            designed to simplify complaint registration, assignment, tracking
+            and resolution.
+          </p>
+
+          <p>
+            Users can submit complaints through an online account and monitor
+            their progress without repeatedly visiting an office. Administrators
+            can organize complaints by category and department, while staff
+            members can work on complaints assigned to them.
+          </p>
+
+          <p>
+            The portal maintains complaint status history so users can
+            understand how their complaint moves through different stages of the
+            resolution process.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="public-section public-section-light">
+      <div class="public-container">
+        <div class="section-heading">
+          <h2>Main Objectives</h2>
+        </div>
+
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fa fa-desktop"></i>
+            </div>
+
+            <h3>Online Registration</h3>
+
+            <p>
+              Allow users to register complaints through a convenient web
+              interface.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fa fa-eye"></i>
+            </div>
+
+            <h3>Transparency</h3>
+
+            <p>
+              Give users visibility into the current status and history of their
+              complaints.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fa fa-sitemap"></i>
+            </div>
+
+            <h3>Organized Workflow</h3>
+
+            <p>
+              Route complaints to suitable departments and responsible staff
+              members.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fa fa-line-chart"></i>
+            </div>
+
+            <h3>Better Monitoring</h3>
+
+            <p>
+              Provide administrators with dashboards and reports for complaint
+              monitoring.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="public-section">
+      <div class="public-container">
+        <div class="section-heading">
+          <h2>System Roles</h2>
+        </div>
+
+        <div class="feature-grid">
+          <div class="feature-card">
+            <h3>User</h3>
+
+            <p>
+              Registers, logs in, submits complaints, checks status, updates
+              profile and submits feedback.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <h3>Staff</h3>
+
+            <p>
+              Views assigned complaints, checks complaint details and updates
+              complaint progress.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <h3>Administrator</h3>
+
+            <p>
+              Controls complaints, users, staff, categories, departments,
+              reports and contact messages.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="public-footer">
+      <div class="public-container">
+        <div class="footer-bottom">
+          <p>
+            &copy;
+            <span id="currentYear"></span>
+            Online Complaint Management Portal.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/public.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const year = document.getElementById("currentYear");
+
+        if (year) {
+          year.textContent = new Date().getFullYear();
+        }
+      });
+    </script>
+  </body>
+</html>

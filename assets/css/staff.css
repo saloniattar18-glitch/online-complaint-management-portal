@@ -1,0 +1,385 @@
+/* =========================================================
+   ONLINE COMPLAINT MANAGEMENT PORTAL
+   Staff Portal Styles
+   File: assets/css/staff.css
+   Load AFTER assets/css/style.css
+   ========================================================= */
+
+body.staff-panel,
+body.staff-page {
+  --staff-primary: #4fc1e9;
+  --staff-primary-dark: #3badd5;
+  --staff-accent: var(--theme);
+}
+
+body.staff-panel .header,
+body.staff-page .header {
+  background: var(--header);
+  border-bottom: 1px solid var(--header-border);
+}
+
+body.staff-panel ul.sidebar-menu li a.active,
+body.staff-panel ul.sidebar-menu li a:hover,
+body.staff-page ul.sidebar-menu li a.active,
+body.staff-page ul.sidebar-menu li a:hover {
+  background: var(--staff-primary);
+  color: #fff;
+}
+
+body.staff-panel .sidebar-profile .profile-avatar,
+body.staff-page .sidebar-profile .profile-avatar {
+  background: var(--staff-primary);
+}
+
+/* =========================================================
+   STAFF HEADER
+   ========================================================= */
+
+.staff-welcome {
+  background: #fff;
+  border-left: 5px solid var(--staff-primary);
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: var(--soft-shadow);
+  border-radius: 3px;
+}
+
+.staff-welcome h2,
+.staff-welcome h3 {
+  margin-bottom: 5px;
+}
+
+.staff-welcome p {
+  margin: 0;
+  color: #999;
+}
+
+/* =========================================================
+   STAFF SUMMARY
+   ========================================================= */
+
+.staff-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.staff-stat-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 105px;
+  padding: 18px;
+  background: #fff;
+  box-shadow: var(--soft-shadow);
+  border-radius: 4px;
+}
+
+.staff-stat-icon {
+  width: 52px;
+  height: 52px;
+  flex: 0 0 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--staff-primary);
+  color: #fff;
+  font-size: 20px;
+}
+
+.staff-stat-card.success .staff-stat-icon {
+  background: var(--success);
+}
+
+.staff-stat-card.warning .staff-stat-icon {
+  background: var(--warning);
+}
+
+.staff-stat-card.danger .staff-stat-icon {
+  background: var(--danger);
+}
+
+.staff-stat-number {
+  font-size: 25px;
+  font-weight: 900;
+  line-height: 1.1;
+  color: #555;
+}
+
+.staff-stat-label {
+  margin-top: 4px;
+  color: #999;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   ASSIGNED COMPLAINTS
+   ========================================================= */
+
+.assigned-list {
+  display: grid;
+  gap: 15px;
+}
+
+.assigned-complaint-card {
+  background: #fff;
+  border-left: 4px solid var(--staff-primary);
+  padding: 18px;
+  box-shadow: var(--soft-shadow);
+  border-radius: 3px;
+}
+
+.assigned-complaint-card.priority-high-card {
+  border-left-color: var(--danger);
+}
+
+.assigned-complaint-card.priority-medium-card {
+  border-left-color: var(--warning);
+}
+
+.assigned-complaint-card.priority-low-card {
+  border-left-color: var(--success);
+}
+
+.assigned-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 12px;
+}
+
+.assigned-card-head h4 {
+  margin: 0 0 4px;
+}
+
+.assigned-card-head .complaint-code {
+  color: var(--staff-primary-dark);
+  font-weight: 700;
+  font-size: 11px;
+}
+
+.assigned-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  color: #999;
+  font-size: 11px;
+}
+
+.assigned-meta i {
+  color: var(--staff-primary-dark);
+  margin-right: 4px;
+}
+
+.assigned-description {
+  margin: 12px 0;
+  color: #777;
+}
+
+.assigned-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+/* =========================================================
+   COMPLAINT WORKSPACE
+   ========================================================= */
+
+.staff-complaint-layout {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1.55fr)
+    minmax(300px, 0.75fr);
+  gap: 20px;
+}
+
+.staff-side-card {
+  background: #fff;
+  padding: 18px;
+  margin-bottom: 20px;
+  box-shadow: var(--soft-shadow);
+  border-radius: 4px;
+}
+
+.staff-side-card h4 {
+  padding-bottom: 10px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.assignment-info li {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 9px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.assignment-info li:last-child {
+  border-bottom: 0;
+}
+
+.assignment-info span {
+  color: #999;
+}
+
+.assignment-info strong {
+  color: #555;
+  text-align: right;
+}
+
+/* =========================================================
+   STATUS UPDATE
+   ========================================================= */
+
+.status-update-box {
+  padding: 16px;
+  background: #f7fcfe;
+  border: 1px solid #d7eef6;
+  border-radius: 4px;
+}
+
+.status-update-box .form-group:last-child {
+  margin-bottom: 0;
+}
+
+.staff-note-list {
+  margin-top: 15px;
+}
+
+.staff-note-item {
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.staff-note-item:last-child {
+  border-bottom: 0;
+}
+
+.staff-note-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.staff-note-head strong {
+  color: #555;
+}
+
+.staff-note-head small {
+  color: #aaa;
+}
+
+.staff-note-item p {
+  margin: 0;
+  color: #777;
+}
+
+/* =========================================================
+   SLA / DUE DATE
+   ========================================================= */
+
+.sla-box {
+  padding: 14px;
+  border-radius: 4px;
+  text-align: center;
+  background: #f7f7f7;
+}
+
+.sla-box strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #555;
+}
+
+.sla-box.normal {
+  border-left: 4px solid var(--success);
+}
+
+.sla-box.warning {
+  border-left: 4px solid var(--warning);
+}
+
+.sla-box.overdue {
+  border-left: 4px solid var(--danger);
+  background: #fff6f7;
+}
+
+/* =========================================================
+   STAFF PROFILE
+   ========================================================= */
+
+.staff-profile-layout {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 20px;
+}
+
+.staff-role-badge {
+  display: inline-block;
+  padding: 5px 10px;
+  margin-top: 8px;
+  border-radius: 20px;
+  background: var(--staff-primary);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1100px) {
+  .staff-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .staff-complaint-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .assigned-card-head,
+  .staff-note-head {
+    display: block;
+  }
+
+  .assigned-card-head .status-badge,
+  .staff-note-head small {
+    display: inline-block;
+    margin-top: 7px;
+  }
+
+  .staff-profile-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .staff-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .assigned-actions .btn {
+    width: 100%;
+  }
+
+  .assignment-info li {
+    display: block;
+  }
+
+  .assignment-info strong {
+    display: block;
+    margin-top: 3px;
+    text-align: left;
+  }
+}

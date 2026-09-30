@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>User Dashboard | Complaint Portal</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="../assets/css/style.css" />
+
+    <link rel="stylesheet" href="../assets/css/user.css" />
+  </head>
+
+  <body class="user-panel">
+    <section id="container">
+      <!-- HEADER -->
+      <header class="header black-bg">
+        <div class="sidebar-toggle-box">
+          <i class="fa fa-bars"></i>
+        </div>
+
+        <a href="dashboard.html" class="logo">
+          <b>
+            Complaint
+            <span>Portal</span>
+          </b>
+        </a>
+
+        <ul class="top-menu">
+          <li>
+            <a href="#" class="logout" data-logout> Logout </a>
+          </li>
+        </ul>
+      </header>
+
+      <!-- SIDEBAR -->
+      <aside>
+        <div id="sidebar">
+          <div class="sidebar-profile">
+            <div class="profile-avatar" data-user-initial>U</div>
+
+            <h5 data-user-name>User</h5>
+
+            <p data-user-role>User</p>
+          </div>
+
+          <ul class="sidebar-menu">
+            <li>
+              <a href="dashboard.html">
+                <i class="fa fa-dashboard"></i>
+                Dashboard
+              </a>
+            </li>
+
+            <li>
+              <a href="submit-complaint.html">
+                <i class="fa fa-plus-circle"></i>
+                Submit Complaint
+              </a>
+            </li>
+
+            <li>
+              <a href="complaints.html">
+                <i class="fa fa-file-text"></i>
+                My Complaints
+              </a>
+            </li>
+
+            <li>
+              <a href="profile.html">
+                <i class="fa fa-user"></i>
+                My Profile
+              </a>
+            </li>
+
+            <li>
+              <a href="feedback.html">
+                <i class="fa fa-star"></i>
+                Feedback
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <section id="main-content">
+        <section class="wrapper" data-user-dashboard>
+          <div class="page-header">
+            <h2>User Dashboard</h2>
+
+            <p>Submit, manage and track your complaints.</p>
+          </div>
+
+          <!-- WELCOME -->
+          <div class="user-welcome">
+            <h2>
+              Welcome,
+              <span data-user-name> User </span>
+            </h2>
+
+            <p>
+              Track the progress of your complaints and communicate with the
+              concerned departments.
+            </p>
+          </div>
+
+          <!-- STATS -->
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-icon">
+                <i class="fa fa-file-text"></i>
+              </div>
+
+              <div class="stat-content">
+                <div class="stat-number" data-stat-total>0</div>
+
+                <div class="stat-label">Total Complaints</div>
+              </div>
+            </div>
+
+            <div class="stat-card warning">
+              <div class="stat-icon">
+                <i class="fa fa-clock-o"></i>
+              </div>
+
+              <div class="stat-content">
+                <div class="stat-number" data-stat-pending>0</div>
+
+                <div class="stat-label">Pending</div>
+              </div>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-icon">
+                <i class="fa fa-spinner"></i>
+              </div>
+
+              <div class="stat-content">
+                <div class="stat-number" data-stat-progress>0</div>
+
+                <div class="stat-label">In Progress</div>
+              </div>
+            </div>
+
+            <div class="stat-card success">
+              <div class="stat-icon">
+                <i class="fa fa-check-circle"></i>
+              </div>
+
+              <div class="stat-content">
+                <div class="stat-number" data-stat-resolved>0</div>
+
+                <div class="stat-label">Resolved</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- QUICK ACTIONS -->
+          <div class="user-quick-actions">
+            <a href="submit-complaint.html" class="user-action-card">
+              <i class="fa fa-plus"></i>
+
+              <h4>Submit Complaint</h4>
+
+              <p>Register a new complaint.</p>
+            </a>
+
+            <a href="complaints.html" class="user-action-card warning">
+              <i class="fa fa-list"></i>
+
+              <h4>My Complaints</h4>
+
+              <p>View all submitted complaints.</p>
+            </a>
+
+            <a href="profile.html" class="user-action-card success">
+              <i class="fa fa-user"></i>
+
+              <h4>My Profile</h4>
+
+              <p>Update your account details.</p>
+            </a>
+          </div>
+
+          <!-- RECENT COMPLAINTS -->
+          <div class="portal-card">
+            <div class="panel-header panel-header-with-action">
+              <h3>Recent Complaints</h3>
+
+              <a href="complaints.html" class="btn btn-theme btn-sm">
+                View All
+              </a>
+            </div>
+
+            <div id="recentComplaints">
+              <div class="loader"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </section>
+
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/user.js"></script>
+  </body>
+</html>

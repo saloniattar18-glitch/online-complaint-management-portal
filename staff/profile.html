@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Staff Profile | Complaint Portal</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="../assets/css/style.css" />
+
+    <link rel="stylesheet" href="../assets/css/staff.css" />
+  </head>
+
+  <body class="staff-panel">
+    <section id="container">
+      <!-- HEADER -->
+      <header class="header black-bg">
+        <div class="sidebar-toggle-box">
+          <i class="fa fa-bars"></i>
+        </div>
+
+        <a href="dashboard.html" class="logo">
+          <b>
+            Complaint
+            <span>Portal</span>
+          </b>
+        </a>
+
+        <ul class="top-menu">
+          <li>
+            <a href="#" class="logout" data-logout> Logout </a>
+          </li>
+        </ul>
+      </header>
+
+      <!-- SIDEBAR -->
+      <aside>
+        <div id="sidebar">
+          <div class="sidebar-profile">
+            <div class="profile-avatar" data-user-initial>S</div>
+
+            <h5 data-user-name>Staff Member</h5>
+
+            <p data-user-role>Staff</p>
+          </div>
+
+          <ul class="sidebar-menu">
+            <li>
+              <a href="dashboard.html">
+                <i class="fa fa-dashboard"></i>
+                Dashboard
+              </a>
+            </li>
+
+            <li>
+              <a href="assigned-complaints.html">
+                <i class="fa fa-tasks"></i>
+                Assigned Complaints
+              </a>
+            </li>
+
+            <li>
+              <a href="profile.html">
+                <i class="fa fa-user"></i>
+                My Profile
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <section id="main-content">
+        <section class="wrapper">
+          <div class="page-header">
+            <h2>Staff Profile</h2>
+
+            <p>View and update your staff account information.</p>
+          </div>
+
+          <div class="staff-profile-layout">
+            <!-- PROFILE CARD -->
+            <div>
+              <div class="profile-card">
+                <div class="profile-avatar-lg" data-user-initial>S</div>
+
+                <h3 data-user-name>Staff Member</h3>
+
+                <p data-user-email>staff@example.com</p>
+
+                <span class="staff-role-badge"> Staff </span>
+              </div>
+
+              <div class="portal-card">
+                <div class="panel-header">
+                  <h4>Account Information</h4>
+                </div>
+
+                <p>
+                  Your staff account is managed by the system administrator.
+                </p>
+
+                <p>
+                  Contact the administrator if your department assignment needs
+                  to be changed.
+                </p>
+              </div>
+            </div>
+
+            <!-- PROFILE FORM -->
+            <div>
+              <div class="form-panel">
+                <div class="panel-header">
+                  <h4>Personal Information</h4>
+                </div>
+
+                <form id="staffProfileForm">
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="full_name"> Full Name </label>
+
+                      <input
+                        type="text"
+                        id="full_name"
+                        name="full_name"
+                        class="form-control"
+                        placeholder="Enter full name"
+                        required
+                      />
+                    </div>
+
+                    <div class="form-group">
+                      <label for="email"> Email Address </label>
+
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        class="form-control"
+                        placeholder="Enter email address"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="mobile"> Mobile Number </label>
+
+                      <input
+                        type="tel"
+                        id="mobile"
+                        name="mobile"
+                        class="form-control"
+                        maxlength="10"
+                        placeholder="Enter mobile number"
+                      />
+                    </div>
+
+                    <div class="form-group">
+                      <label for="username"> Username </label>
+
+                      <input
+                        type="text"
+                        id="username"
+                        name="username"
+                        class="form-control"
+                        placeholder="Enter username"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="address"> Address </label>
+
+                    <textarea
+                      id="address"
+                      name="address"
+                      class="form-control"
+                      rows="4"
+                      placeholder="Enter address"
+                    ></textarea>
+                  </div>
+
+                  <button type="submit" class="btn btn-info">
+                    <i class="fa fa-save"></i>
+                    Save Changes
+                  </button>
+                </form>
+              </div>
+
+              <!-- SECURITY -->
+              <div class="portal-card">
+                <div class="panel-header">
+                  <h4>Security Notice</h4>
+                </div>
+
+                <p>
+                  Never share your staff login credentials with another person.
+                </p>
+
+                <p class="mb-0">
+                  Always log out after completing complaint-related work on
+                  shared computers.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </section>
+
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/staff.js"></script>
+  </body>
+</html>
