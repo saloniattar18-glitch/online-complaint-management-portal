@@ -903,7 +903,21 @@ async function handler(req, res) {
            GLOBAL ERROR HANDLER
            ================================================= */
 
-    console.error("API ERROR:", error);
+    console.error("API ERROR:", {
+  message: error.message,
+  stack: error.stack,
+  code: error.code,
+  detail: error.detail,
+});
+
+return res.status(error.statusCode || 500).json({
+  message:
+    process.env.NODE_ENV === "production"
+      ? error.statusCode
+        ? error.message
+        : "A server error occurred."
+      : error.message,
+});
 
     /*
      * Controllers / authentication middleware can
