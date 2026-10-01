@@ -1792,8 +1792,7 @@ select.form-control {
   color: #fff;
   font-size: 20px;
   font-weight: 900;
-  height: 50px;
-  
+  height: 90px;
 }
 
 .public-logo span {
@@ -2128,7 +2127,3 @@ select.form-control {
   }
 }
 
-.public-brand
-{
-  height: 25px; width: 25px;
-}
