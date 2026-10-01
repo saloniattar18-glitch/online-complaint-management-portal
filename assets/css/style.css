@@ -1792,6 +1792,8 @@ select.form-control {
   color: #fff;
   font-size: 20px;
   font-weight: 900;
+  height: 50px;
+  
 }
 
 .public-logo span {
